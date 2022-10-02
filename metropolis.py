@@ -30,7 +30,7 @@ for i in range(0,len(sys.argv)):
     if(sys.argv[i] == '--mode'):
         gridMode=int(sys.argv[i+1])
     if(sys.argv[i] == '--help'):
-        print "\n-o\t[Filename]\tOutput file name\n-d\t[dimension]\tDimensions of problem.\n-n\t[Size]\t\tSize of grid.\nIteration stop point order of magnitude\n-m\t[sweeps]\tMeasurement Sweeps\n-t\t[sweeps]\tThermalization Sweeps"
+        print ("\n-o\t[Filename]\tOutput file name\n-d\t[dimension]\tDimensions of problem.\n-n\t[Size]\t\tSize of grid.\nIteration stop point order of magnitude\n-m\t[sweeps]\tMeasurement Sweeps\n-t\t[sweeps]\tThermalization Sweeps")
         sys.exit()
     
 if(gridMode == 0):
@@ -40,8 +40,8 @@ if(gridMode == 1):
 if(gridMode == 2):
     grid = SpinGlass(dim,gridSize)
 else:
-    print "Unrecognized grid mode"
+    print ("Unrecognized grid mode")
     sys.exit()
     
-print '-------------------------------------------------\Running Metropolis Algoritn\n' + 'Thermalization Sweeps:' + str(thermalizationSweeps) + '\tMeasurement Sweeps:'+ str(measurementSweeps)
+print ('-------------------------------------------------\Running Metropolis Algoritn\n' + 'Thermalization Sweeps:' + str(thermalizationSweeps) + '\tMeasurement Sweeps:'+ str(measurementSweeps))
 MetropolisModule.runAlgorithm(grid, plotRange, thermalizationSweeps, measurementSweeps, numAverages, fileOut)

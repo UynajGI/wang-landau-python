@@ -19,7 +19,7 @@ def plotToFile(plotFunction,plotRange,fileOut,header='',log10plot=False,verbose=
             file.write('\t' + str(out) )
         file.write('\n')
         if(verbose):
-            print str(float(k)*100.0/len(plotVals)) + " % done"
+            print( str(float(k)*100.0/len(plotVals)) + " % d one")
     file.close()
 
 #used for plotting a matrix of data points (to a file for gnuplot)

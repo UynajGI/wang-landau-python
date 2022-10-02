@@ -12,7 +12,7 @@ class IsingGrid:
         self.MAX_E = dimension*N**dimension
         self.array = [0]*N**dimension
         self.fieldB = 0.0
-        for i in xrange(0,N**dimension):
+        for i in range(0,N**dimension):
             self.array[i] = -1+2*int(random.random()*2)
     
     def getIndex(self,indexArray):
@@ -81,7 +81,7 @@ class PottsGrid:
         self.MAX_E = dimension*N**dimension
         self.array = [0]*N**dimension
         self.fieldB = 0.0
-        for i in xrange(0,N**dimension):
+        for i in range(0,N**dimension):
             self.array[i] = int(random.random()*numStates)
     
     def getIndex(self,indexArray):
@@ -142,7 +142,7 @@ class SpinGlass:
         self.array = [0]*N**dimension
         self.j = [0]*N**dimension
         self.fieldB = 0.0
-        for i in xrange(0,N**dimension):
+        for i in range(0,N**dimension):
             self.array[i] = -1+2*int(random.random()*2)
             self.j[i] = -1+2*int(random.random()*2)
     
